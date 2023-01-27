@@ -1,0 +1,52 @@
+
+.tags{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #161932;
+    margin: 0px auto;
+    width:373px;
+    height: 63px;
+    border-radius: 31.5px;
+    padding: 8px;
+}
+
+.tags .tag{
+    width: 120px;
+    height: 48px;
+    border-radius: 26.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tags .tag p{
+    color:#D7E0FF;
+    opacity: 0.6;
+    margin: auto;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.tags .active{
+    background-color: #F87070;
+}
+.tags .active p{
+    color:#1E213F;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 500px){
+    .tags{
+        width:353px;
+        height: 53px;
+    }
+}
+@media only screen and (max-width: 420px){
+    .tags{
+        width:333px;
+        height: 53px;
+    }
+}

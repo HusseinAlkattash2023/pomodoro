@@ -1,0 +1,33 @@
+.circle{
+    width: 420px;
+    height:420px;
+    background-color: #2E325A;
+    border-radius: 50%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:-50px 50px 150px 10px rgba(6, 6, 24, 0.35)   ;
+}
+
+@media only screen and (max-width: 500px){
+    .circle{
+        width: 380px;
+        height:380px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .circle{
+        width: 350px;
+        height:350px;
+    }
+}
+
+
+@media only screen and (max-width: 380px){
+    .circle{
+        width: 320px;
+        height:320px;
+    }
+}

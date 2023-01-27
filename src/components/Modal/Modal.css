@@ -1,0 +1,140 @@
+._modal{
+    font-family: "Kumbh Sans" , sans-serif;
+}
+
+._modal .settings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.modal-header{
+    height: 100px;
+}
+
+._modal .modal-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-left:20px;
+    color:#161932
+}
+
+.time h4{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 600;
+    color:#161932;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form .input{
+    display: flex;
+    flex-direction: column;
+}
+.form .input label{
+    font-size: 12px;
+    color:rgb(162, 162, 162);
+    font-weight: 700;
+}
+.form .input input{
+    border: none;
+    width:140px;
+    height: 48px;
+    background-color: #D7E0FF;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color:#161932;
+}
+
+._modal .color , ._modal .fonts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+._modal .fonts{
+    border-top: 1px solid #D7E0FF;
+    border-bottom: 1px solid #D7E0FF;
+    padding: 30px 0px;
+}
+._modal .color h4 , ._modal .fonts h4{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 600;
+    color:#161932;
+    margin-left: 20px;
+}
+._modal .color button , ._modal .fonts button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color:#161932;
+    font-weight: 700;
+}
+
+._modal .fonts .active{
+    background-color: #161932;
+    color: #fff;
+}
+
+
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-footer button{
+    text-align: center;
+    position: relative;
+    top:40px;
+    width:140px;
+    height: 53px;
+    color: #fff;
+    background-color: #F87070;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+.modal-footer button:hover{
+    opacity: 0.9;
+}
+
+@media only screen and (max-width: 460px){
+    .form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .form .input{
+        margin: 10px auto;
+    }
+    .form .input input{
+        border: none;
+        width:250px;
+        height: 48px;
+        background-color: #D7E0FF;
+        border-radius: 6px;
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color:#161932;
+    }
+}
