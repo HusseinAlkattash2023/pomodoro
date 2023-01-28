@@ -7,15 +7,15 @@ const Form = () => {
 
     const [firstName , setFirstName ] = useState("");
     const [lastName , setLastName ] = useState("");
-    const [file , setFile ] = useState();
+    const [file , setFile ] = useState("");
 
     const dataUser = [
         {
-            key:"firstName",
+            key:"firstname",
             value:firstName
         },
         {
-            key:"lastName",
+            key:"lastname",
             value:lastName
         },
         {
@@ -30,9 +30,9 @@ const Form = () => {
         const formData = new FormData();
         dataUser.map((item) => formData.append(item.key, item.value));
         
-        Axios.post(`/api/` , formData)
-        .then(()=>{
-
+        Axios.post(`https://24fc-212-237-120-128.eu.ngrok.io/api/test` , formData)
+        .then((res)=>{
+          console.log(res.data)
         })
         .catch((err)=>{
             console.error(err);
@@ -42,7 +42,7 @@ const Form = () => {
 
   return (
     <div className="form my-3 p-4">
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} encType="multipart/form-data">
       <div className="mb-3">
         <label htmlFor="exampleFormControlInput1" className="form-label">
           First Name
@@ -60,7 +60,7 @@ const Form = () => {
             Select an image
         </label>
         <input
-          onChange={(e)=> setFile(e.target.files)}
+          onChange={(e)=> setFile(e.target.files[0])}
           className="form-control"
           type="file"
           id="formFileMultiple"

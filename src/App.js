@@ -8,6 +8,7 @@ import Tags from './components/Tags/Tags';
 import Timer from './components/Timer/Timer';
 import Modal from './components/Modal/Modal';
 import Form from './components/Form/Form';
+import GetData from './components/GetData/GetData';
 
 /* import logo  pomodoro*/
 import logo from './assets/logo.svg'
@@ -48,6 +49,8 @@ function App(){
 
         {/* Form */}
         <Form/>
+
+        <GetData/>
     </div>
   )
 }
