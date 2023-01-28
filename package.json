@@ -1,5 +1,6 @@
 {
-  "name": "app",
+  "homepage": "https://HusseinAlkattash2023.github.io/pomodoro",
+  "name": "pomodoro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "apexcharts": "^3.36.0",
+    "axios": "^1.2.5",
     "flatpickr": "^4.6.13",
     "formik": "^2.2.9",
     "framer-motion": "^8.5.2",
@@ -22,6 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

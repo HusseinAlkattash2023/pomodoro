@@ -7,6 +7,7 @@ import './App.css';
 import Tags from './components/Tags/Tags';
 import Timer from './components/Timer/Timer';
 import Modal from './components/Modal/Modal';
+import Form from './components/Form/Form';
 
 /* import logo  pomodoro*/
 import logo from './assets/logo.svg'
@@ -44,6 +45,9 @@ function App(){
 
         {/* Modal */}
         <Modal/>
+
+        {/* Form */}
+        <Form/>
     </div>
   )
 }
