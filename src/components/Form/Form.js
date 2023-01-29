@@ -24,13 +24,21 @@ const Form = () => {
         }
     ]
 
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'JWT fefege...'
+  }
+
     const handleSubmit = (e)=>{
 
         e.preventDefault()
         const formData = new FormData();
         dataUser.map((item) => formData.append(item.key, item.value));
         
-        Axios.post(`https://24fc-212-237-120-128.eu.ngrok.io/api/test` , formData)
+        Axios.post(`${process.env.REACT_APP_API_KEY}/api/test` , formData , {
+          headers:headers
+        })
         .then((res)=>{
           console.log(res.data)
         })

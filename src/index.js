@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import StateProvider from './components/StateProvider';
+import store from "./Store/index";
+import { Provider } from "react-redux";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <StateProvider>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </StateProvider>
   </React.StrictMode>
 );

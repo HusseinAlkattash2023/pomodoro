@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import "./GetData.css";
+// import { useSelector } from "react-redux";
+
+const headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'JWT fefege...'
+}
 
 const GatData = () => {
   const [dataUser, setDataUser] = useState();
 
-  // useEffect(()=>{
-  //     handleSubmit()
-  // } , [])
+  // const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
   const handleSubmit = () => {
-    Axios.get(`https://24fc-212-237-120-128.eu.ngrok.io/api/test`)
+    Axios.get(`${process.env.REACT_APP_API_KEY}/api/test` , {
+      headers:headers
+    })
       .then((res) => {
-        console.log(res.data.data);
         setDataUser(res.data.data);
-        console.log(dataUser);
       })
       .catch((error) => {
         console.log(error);
